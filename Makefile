@@ -177,6 +177,9 @@ clean:
 	.gdbinit \
 	$(UPROGS)
 
+mrproper: clean
+	rm -rf fmt/ xv6.pdf xv6.ps
+
 # make a printout
 FILES = $(shell grep -v '^\#' runoff.list)
 PRINT = runoff.list runoff.spec README toc.hdr toc.ftr $(FILES)
